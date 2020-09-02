@@ -25,7 +25,6 @@ import { THEME } from '../../theme/variables/airbitz.js'
 import type { GuiWallet, TransactionListTx } from '../../types/types.js'
 import { scale } from '../../util/scaling.js'
 import * as UTILS from '../../util/utils'
-import BuyCrypto from '../common/BuyCrypto.js'
 import { SceneWrapper } from '../common/SceneWrapper.js'
 
 const INITIAL_TRANSACTION_BATCH_NUMBER = 10
@@ -106,31 +105,12 @@ export class TransactionList extends React.Component<Props, State> {
   }
 
   renderBuyCrypto = () => {
-    const wallet = this.props.uiWallet
-    const { selectedCurrencyCode } = this.props
     if (this.props.numTransactions) {
       return (
         <View style={styles.emptyListLoader}>
           <ActivityIndicator size="large" />
         </View>
       )
-    }
-
-    switch (selectedCurrencyCode) {
-      case 'BTC':
-        return <BuyCrypto wallet={wallet} />
-      case 'BCH':
-        return <BuyCrypto wallet={wallet} />
-      case 'ETH':
-        return <BuyCrypto wallet={wallet} />
-      case 'LTC':
-        return <BuyCrypto wallet={wallet} />
-      case 'XRP':
-        return <BuyCrypto wallet={wallet} />
-      case 'BSV':
-        return <BuyCrypto wallet={wallet} />
-      default:
-        return null
     }
   }
 

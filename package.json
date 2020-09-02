@@ -10,16 +10,6 @@
   },
   "license": "SEE LICENSE IN LICENSE",
   "author": "Edge, Inc.",
-  "contributors": [
-    "Allen Hujsak <allen@edge.app>",
-    "Eliran Zack <eliran@edge.app>",
-    "Kevin Sullivan <kevin@edge.app>",
-    "Kylan Hurt <kylan@edge.app>",
-    "James Risberg <james@edge.app>",
-    "Paul Puey <paul@edge.app>",
-    "William Swanson <william@edge.app>",
-    "Tim Horton <tim@edge.app>"
-  ],
   "scripts": {
     "android:clean": "cd android && ./gradlew clean && rm -rf build && cd ../",
     "android:logcat": "adb logcat *:S ReactNative:V ReactNativeJS:V",

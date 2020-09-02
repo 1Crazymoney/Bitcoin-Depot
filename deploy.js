@@ -70,7 +70,7 @@ main()
 function main() {
   if (argv.length < 4) {
     mylog('Usage: node deploy.js [project] [platform] [branch]')
-    mylog('  project options: edge')
+    mylog('  project options: Bitcoin Depot')
     mylog('  platform options: ios, android')
     mylog('  network options: master, develop')
   }

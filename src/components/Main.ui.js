@@ -90,13 +90,12 @@ import { CreateWalletName } from './scenes/CreateWalletNameScene.js'
 import { CryptoExchangeQuoteProcessingScreenComponent } from './scenes/CryptoExchangeQuoteProcessingScene.js'
 import { CurrencyNotificationScene } from './scenes/CurrencyNotificationScene'
 import { EditTokenScene } from './scenes/EditTokenScene.js'
-import { GuiPluginLegacyScene, renderLegacyPluginBackButton } from './scenes/GuiPluginLegacyScene.js'
-import { GuiPluginListScene } from './scenes/GuiPluginListScene.js'
 import { GuiPluginViewScene } from './scenes/GuiPluginViewScene.js'
 import { LoginScene } from './scenes/LoginScene.js'
 import { NotificationScene } from './scenes/NotificationScene'
 import { SettingsScene } from './scenes/SettingsScene.js'
 import { TermsOfServiceComponent } from './scenes/TermsOfServiceScene.js'
+import { PrivacyOfPolicyScene } from './scenes/PrivacyOfPolicyScene'
 import { TransactionDetailsScene } from './scenes/TransactionDetailsScene.js'
 import { showToast } from './services/AirshipInstance.js'
 
@@ -367,68 +366,6 @@ export class MainComponent extends React.Component<Props> {
               />
             </Stack>
 
-            <Stack key={Constants.PLUGIN_BUY} icon={this.icon(Constants.PLUGIN_BUY)} tabBarLabel={s.strings.title_buy}>
-              <Scene
-                key={Constants.PLUGIN_BUY}
-                navTransparent
-                component={ifLoggedIn(GuiPluginListScene)}
-                renderTitle={this.renderTitle(s.strings.title_plugin_buy)}
-                renderLeftButton={this.renderHelpButton()}
-                renderRightButton={this.renderMenuButton()}
-                onLeft={Actions.pop}
-                direction="buy"
-              />
-              <Scene
-                key={Constants.PLUGIN_VIEW}
-                navTransparent
-                component={ifLoggedIn(GuiPluginViewScene)}
-                renderTitle={props => this.renderTitle(props.plugin.displayName)}
-                renderLeftButton={renderPluginBackButton()}
-                renderRightButton={this.renderExitButton()}
-                hideTabBar
-              />
-              <Scene
-                key={Constants.PLUGIN_VIEW_LEGACY}
-                navTransparent
-                component={ifLoggedIn(GuiPluginLegacyScene)}
-                renderTitle={props => this.renderTitle(props.plugin.displayName)}
-                renderLeftButton={renderLegacyPluginBackButton()}
-                renderRightButton={this.renderExitButton()}
-                hideTabBar
-              />
-            </Stack>
-
-            <Stack key={Constants.PLUGIN_SELL} icon={this.icon(Constants.PLUGIN_SELL)} tabBarLabel={s.strings.title_sell}>
-              <Scene
-                key={Constants.PLUGIN_SELL}
-                navTransparent
-                component={ifLoggedIn(GuiPluginListScene)}
-                renderTitle={this.renderTitle(s.strings.title_plugin_sell)}
-                renderLeftButton={this.renderHelpButton()}
-                renderRightButton={this.renderMenuButton()}
-                onLeft={Actions.pop}
-                direction="sell"
-              />
-              <Scene
-                key={Constants.PLUGIN_VIEW}
-                navTransparent
-                component={ifLoggedIn(GuiPluginViewScene)}
-                renderTitle={props => this.renderTitle(props.plugin.displayName)}
-                renderLeftButton={renderPluginBackButton()}
-                renderRightButton={this.renderExitButton()}
-                hideTabBar
-              />
-              <Scene
-                key={Constants.PLUGIN_VIEW_LEGACY}
-                navTransparent
-                component={ifLoggedIn(GuiPluginLegacyScene)}
-                renderTitle={props => this.renderTitle(props.plugin.displayName)}
-                renderLeftButton={renderLegacyPluginBackButton()}
-                renderRightButton={this.renderExitButton()}
-                hideTabBar
-              />
-            </Stack>
-
             <Stack key={Constants.EXCHANGE} icon={this.icon(Constants.EXCHANGE)} tabBarLabel={s.strings.title_exchange}>
               <Scene
                 key={Constants.EXCHANGE_SCENE}
@@ -631,6 +568,18 @@ export class MainComponent extends React.Component<Props> {
               navTransparent
               component={ifLoggedIn(TermsOfServiceComponent)}
               renderTitle={this.renderTitle(s.strings.title_terms_of_service)}
+              renderLeftButton={this.renderBackButton()}
+              renderRightButton={this.renderEmptyButton()}
+              onLeft={Actions.pop}
+            />
+          </Stack>
+
+          <Stack key={Constants.PRIVACY_POLICY}>
+            <Scene
+              key={Constants.PRIVACY_POLICY}
+              navTransparent
+              component={ifLoggedIn(PrivacyOfPolicyScene)}
+              renderTitle={this.renderTitle(s.strings.swap_terms_privacy_link)}
               renderLeftButton={this.renderBackButton()}
               renderRightButton={this.renderEmptyButton()}
               onLeft={Actions.pop}

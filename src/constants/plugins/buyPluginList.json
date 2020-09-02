@@ -807,7 +807,7 @@
     "paymentTypeLogoKey": "upi",
     "deepQuery": {
       "countryCode": "IN",
-      "exchangeScreenTitle": "Buy crypto to your Edge wallet",
+      "exchangeScreenTitle": "Buy crypto to your Bitcoin Depot",
       "paymentMethod": "upi"
     }
   },
@@ -831,7 +831,7 @@
     "paymentTypeLogoKey": "bank",
     "deepQuery": {
       "countryCode": "IN",
-      "exchangeScreenTitle": "Buy crypto to your Edge wallet",
+      "exchangeScreenTitle": "Buy crypto to your Bitcoin Depot wallet",
       "paymentMethod": "neft_bank_transfer"
     }
   },
@@ -855,7 +855,7 @@
     "deepQuery": {
       "countryCode": "US",
       "paymentMethod": "credit_debit_card",
-      "exchangeScreenTitle": "Buy crypto to your Edge wallet"
+      "exchangeScreenTitle": "Buy crypto to your Bitcoin Depot wallet"
     }
   },
   "----- Sorting -----",

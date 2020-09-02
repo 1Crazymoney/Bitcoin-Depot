@@ -5,11 +5,11 @@ import { WebView } from 'react-native-webview'
 
 import { SceneWrapper } from '../common/SceneWrapper.js'
 
-const WEB_URI = 'https://www.bitcoindepot.com/terms/'
+const WEB_URI = 'https://www.bitcoindepot.com/'
 
 type Props = {}
 
-export class TermsOfServiceComponent extends React.Component<Props> {
+export class NewSiteScene extends React.Component<Props> {
   render() {
     return (
       <SceneWrapper background="body" hasTabs={false}>

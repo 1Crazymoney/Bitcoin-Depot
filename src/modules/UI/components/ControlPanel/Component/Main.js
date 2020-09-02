@@ -67,6 +67,8 @@ export default class Main extends React.Component<Props> {
               <Separator />
               <TermsOfServiceButton />
               <Separator />
+              <PrivacyPolicyButton />
+              <Separator />
               <ShareButton />
               <Separator />
             </View>
@@ -257,6 +259,24 @@ const TermsOfServiceButton = () => {
         <Button.Center>
           <Button.Text>
             <Text>{s.strings.title_terms_of_service}</Text>
+          </Button.Text>
+        </Button.Center>
+      </Button.Row>
+    </Button>
+  )
+}
+
+const PrivacyPolicyButton = () => {
+  return (
+    <Button onPress={Actions[Constants.PRIVACY_POLICY]}>
+      <Button.Row>
+        <Button.Left>
+          <Image source={termsIcon} style={styles.iconImage} />
+        </Button.Left>
+
+        <Button.Center>
+          <Button.Text>
+            <Text>{s.strings.swap_terms_privacy_link}</Text>
           </Button.Text>
         </Button.Center>
       </Button.Row>

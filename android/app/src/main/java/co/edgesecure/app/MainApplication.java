@@ -13,6 +13,10 @@ import com.bugsnag.BugsnagReactNative;
 import com.chirag.RNMail.RNMail;
 import com.cmcewen.blurview.BlurViewPackage;
 import com.facebook.react.ReactApplication;
+import ca.jaysoo.extradimensions.ExtraDimensionsPackage;
+import io.invertase.firebase.messaging.ReactNativeFirebaseMessagingPackage;
+import io.invertase.firebase.iid.ReactNativeFirebaseIidPackage;
+import io.invertase.firebase.ReactNativeFirebaseAppPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.modules.i18nmanager.I18nUtil;
@@ -54,6 +58,10 @@ public class MainApplication extends Application implements ReactApplication {
         protected List<ReactPackage> getPackages() {
           return Arrays.<ReactPackage>asList(
               new MainReactPackage(),
+            new ExtraDimensionsPackage(),
+            new ReactNativeFirebaseMessagingPackage(),
+            new ReactNativeFirebaseIidPackage(),
+            new ReactNativeFirebaseAppPackage(),
               new BlurViewPackage(),
               new RNCAppearancePackage(),
               new RNDateTimePickerPackage(),

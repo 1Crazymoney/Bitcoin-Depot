@@ -2,7 +2,7 @@ platform :ios, '9.0'
 
 source 'https://github.com/CocoaPods/Specs.git'
 
-target 'edge' do
+target 'Bitcoin Depot' do
   # React Native
   pod 'React', :path => '../node_modules/react-native', :subspecs => [
     'Core',

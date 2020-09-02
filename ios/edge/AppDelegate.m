@@ -45,13 +45,13 @@
   didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
   [BugsnagReactNative start];
-  
+
   [FIRApp configure];
   [FIRMessaging messaging].delegate = self;
 
   RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:launchOptions];
   RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:bridge
-                                                   moduleName:@"edge"
+                                                   moduleName:@"Bitcoin Depot"
                                             initialProperties:nil];
 
   [RCTSplashScreen open:rootView withImageNamed:@"splash"];
